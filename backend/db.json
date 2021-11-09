@@ -1,29 +1,58 @@
 {
   "products": [
     {
-      "name": "Ramon Moisés Colim Firmo",
-      "bpm": "220",
+      "name": "Ramon",
+      "bpm": "121",
+      "bpmReferencia": 120,
       "id": 1
     },
     {
-      "name": "Maria Joana Da Silva Dias",
-      "bpm": "100",
+      "name": "Ramon Teste",
+      "bpm": 13,
+      "bpmReferencia": 120,
       "id": 2
     },
     {
-      "name": "João Oliveira Junior",
-      "bpm": "230",
+      "name": "Ramon Teste 3",
+      "bpm": 99,
+      "bpmReferencia": 120,
       "id": 3
     },
     {
-      "name": "Maria das Dores Calixto",
-      "bpm": "80",
+      "name": "Ramon Teste 4",
+      "bpm": 100,
+      "bpmReferencia": 120,
       "id": 4
     },
     {
-      "name": "William",
-      "bpm": "130",
+      "name": "Ramon Teste 5",
+      "bpm": 121,
+      "bpmReferencia": 120,
       "id": 5
+    },
+    {
+      "name": "Ramon Teste 6",
+      "bpm": 150,
+      "bpmReferencia": 120,
+      "id": 6
+    },
+    {
+      "name": "Ramon Teste 7",
+      "bpm": 200,
+      "bpmReferencia": 201,
+      "id": 7
+    },
+    {
+      "name": "Ramon Teste 20",
+      "bpm": 13,
+      "bpmReferencia": 120,
+      "id": 8
+    },
+    {
+      "name": "Ramon ult",
+      "bpm": 150,
+      "bpmReferencia": 120,
+      "id": 12
     }
   ]
 }

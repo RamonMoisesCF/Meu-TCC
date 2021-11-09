@@ -20,14 +20,6 @@ export class ProductReadComponent implements OnInit {
     })
   }
 
-   /* public varCoracao (bpmReferencia, bpm){
-    console.log(bpmReferencia)
-    if (bpmReferencia > bpm) {
-      return true
-    }
-    return false
-  }  */
-
   public mostraCoracao( bpm, bpmReferencia ) {
 
     console.log(bpm, bpmReferencia)

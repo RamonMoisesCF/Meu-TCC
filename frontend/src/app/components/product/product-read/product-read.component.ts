@@ -28,7 +28,8 @@ export class ProductReadComponent implements OnInit {
     return false
   }  */
 
-  public mostraCoracao( bpm: number, bpmReferencia: number ) {
+  public mostraCoracao( bpm, bpmReferencia ) {
+
     console.log(bpm, bpmReferencia)
     if (bpm > bpmReferencia) {
       return true 

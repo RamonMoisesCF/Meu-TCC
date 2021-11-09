@@ -9,6 +9,8 @@ import { Router } from '@angular/router'
 })
 export class ProductCrudComponent implements OnInit {
 
+  
+
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
       title: 'Cadastro de Pacientes',
@@ -18,6 +20,7 @@ export class ProductCrudComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
   }
 
   navigateToProductCreate(): void {

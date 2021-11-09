@@ -7,7 +7,11 @@
         </mat-form-field>
         <mat-form-field>
             <input matInput placeholder="BPM (Batimentos por minuto)"
-                [(ngModel)]="product.bpm" name="number">
+                [(ngModel)]="product.bpm" name="number" type="number">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
+                [(ngModel)]="product.bpmReferencia" name="number" type="number">
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="createProduct()" color="primary">

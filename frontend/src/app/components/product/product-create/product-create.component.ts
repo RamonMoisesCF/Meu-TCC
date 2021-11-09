@@ -12,7 +12,8 @@ export class ProductCreateComponent implements OnInit {
 
   product: Product = {
     name: '',
-    bpm: null
+    bpm: null,
+    bpmReferencia: null
   }
 
   constructor(private productService: ProductService,

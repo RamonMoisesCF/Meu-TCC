@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductReadComponent implements OnInit {
 
   products: Product[]
-  displayedColumns = ['id', 'name', 'bpm', 'action']
+  displayedColumns = ['id', 'name', 'bpm', 'bpmReferencia', 'action']
   
   constructor(private productService: ProductService) { }
 
@@ -20,22 +20,19 @@ export class ProductReadComponent implements OnInit {
     })
   }
 
-  /* validarBpm(any Produtos){
-    if (bpm > 200){
-      return true
-    }
-
-    enviar 
-  } */
-
-  public mostraCoracao( bpm ) {
-    console.log(bpm)
-    if (bpm > 200) {
+   /* public varCoracao (bpmReferencia, bpm){
+    console.log(bpmReferencia)
+    if (bpmReferencia > bpm) {
       return true
     }
     return false
+  }  */
+
+  public mostraCoracao( bpm: number, bpmReferencia: number ) {
+    console.log(bpm, bpmReferencia)
+    if (bpm > bpmReferencia) {
+      return true 
+    }
+    return false
   }
-
-
-
 }

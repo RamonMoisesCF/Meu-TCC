@@ -13,8 +13,3 @@ table {
 .delete > i {
     color: #e35e6b;
 }
-
-.mostraCoracao.then_coracaoAlerta.else_coracaoNormal {
-    background: red;
-    color: red;
-}

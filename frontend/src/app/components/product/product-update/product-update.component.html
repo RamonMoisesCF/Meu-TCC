@@ -9,6 +9,10 @@
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [(ngModel)]="product.bpm" name="bpm">
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
+                [(ngModel)]="product.bpmReferencia" name="bpmReferencia">
+        </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateProduct()" color="primary">
         Atualizar

@@ -9,6 +9,10 @@
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [value]="product.bpm" name="bpm" disabled>
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
+                [value]="product.bpmReferencia" name="bpmReferencia" disabled>
+        </mat-form-field>
     </form>
     <button mat-raised-button (click)="deleteProduct()" color="warn">
         Excluir

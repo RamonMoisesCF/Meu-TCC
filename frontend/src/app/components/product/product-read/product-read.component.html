@@ -15,41 +15,59 @@
       <!-- BPM Column -->
       <ng-container matColumnDef="bpm">
         <th mat-header-cell *matHeaderCellDef> 
+
           <span class="material-icons">
             monitor_heart
-            </span>
-            BPM
+          </span>
+
+          BPM Atual
+
         </th>
         <td mat-cell *matCellDef="let row">
 
           <!-- Função mostra coração -->
           
-          <div *ngIf="mostraCoracao( row.bpm ); then coracaoAlerta; else coracaoNormal"></div>
+          <div *ngIf="mostraCoracao( row.bpm, row.bpmReferencia ); then coracaoAlerta; else coracaoNormal"></div>
 
-            <ng-template #coracaoAlerta>
-          
-              <img src="../../../../assets/img/gif-coracao.gif" width="24" height="24">
-            
-            </ng-template>
+          <ng-template #coracaoAlerta>
+            <img src="../../../../assets/img/gif-coracao.gif" width="24" height="24">
+          </ng-template>
           
 
           <ng-template #coracaoNormal>
             <span class="material-icons">favorite</span>
           </ng-template>
-
-          {{ row.bpm }}
-
-
-    <!--  <img *ngIf=" validarBpm({{ row.bpm }})" src="../../../../assets/img/gif-coracao.gif" width="24" height="24" *ngif>
-          <img *ngIf=" {{ row.bpm }} > 200" src="../../../../assets/img/gif-coracao.gif" width="24" height="24" *ngif>    
- 
           
-          <img src="../../../../assets/img/gif-coracao.gif" width="24" height="24"> -->
+
+          {{row.bpm}}
           
           
         </td>
         
       </ng-container>
+
+      <!-- BPM Referencia Column -->
+    <ng-container matColumnDef="bpmReferencia">
+      <th mat-header-cell *matHeaderCellDef>
+
+        <span class="material-icons">
+          monitor_heart
+        </span>
+
+        BPM Referência
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        <span class="material-icons">
+          favorite
+        </span>
+
+        {{row.bpmReferencia}}
+
+      </td>
+    </ng-container>
 
       <!-- Action Column -->
       <ng-container matColumnDef="action">

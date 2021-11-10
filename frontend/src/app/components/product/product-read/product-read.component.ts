@@ -22,6 +22,11 @@ export class ProductReadComponent implements OnInit {
 
   public mostraCoracao( bpm, bpmReferencia ) {
 
+    /* Função de Reload */
+    setTimeout(function(){
+      window.location.reload();
+   }, 5000);
+
     console.log(bpm, bpmReferencia)
     if (bpm > bpmReferencia) {
       return true 

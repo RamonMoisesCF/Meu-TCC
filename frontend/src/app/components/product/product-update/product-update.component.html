@@ -1,17 +1,47 @@
 <mat-card>
     <mat-card-title>Alterar Paciente</mat-card-title>
     <form>
+
+        <h2>Dados Pessoais</h2>
+
         <mat-form-field>
             <input matInput placeholder="Nome"
                 [(ngModel)]="product.name" name="name">
         </mat-form-field>
         <mat-form-field>
+            <input matInput placeholder="Idade"
+                [(ngModel)]="product.idade" name="idade">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone (xx) x xxxx-xxxx"
+                [(ngModel)]="product.telefone" name="telefone">
+        </mat-form-field>
+
+        <h2>Dados Fisiológicos</h2>
+
+        <!-- <mat-form-field>
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [(ngModel)]="product.bpm" name="bpm">
-        </mat-form-field>
+        </mat-form-field> -->
         <mat-form-field>
             <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
                 [(ngModel)]="product.bpmReferencia" name="bpmReferencia">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <input matInput placeholder="Pressão Arterial (PA)"
+                [(ngModel)]="product.pressaoArterial" name="pressaoArterial">
+        </mat-form-field> -->
+        <mat-form-field>
+            <input matInput placeholder="Pressão Arterial Referencia (PA)"
+                [(ngModel)]="product.pressaoArterialReferencia" name="pressaoArterialReferencia">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <input matInput placeholder="Saturação (85)"
+                [(ngModel)]="product.saturacao" name="saturacao">
+        </mat-form-field> -->
+        <mat-form-field>
+            <input matInput placeholder="Saturacao Referencia (85)"
+                [(ngModel)]="product.saturacaoReferencia" name="saturacaoReferencia">
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateProduct()" color="primary">

@@ -1,10 +1,24 @@
 <mat-card>
     <mat-card-title>Excluir Paciente</mat-card-title>
     <form>
+
+        <h2>Dados Pessoais</h2>
+
         <mat-form-field>
             <input matInput placeholder="Nome"
                 [value]="product.name" name="name" disabled>
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Idade"
+                [value]="product.idade" name="idade" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone (xx) x xxxx-xxxx"
+                [value]="product.telefone" name="telefone" disabled>
+        </mat-form-field>
+
+        <h2>Dados Fisiológicos</h2>
+
         <mat-form-field>
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [value]="product.bpm" name="bpm" disabled>
@@ -12,6 +26,22 @@
         <mat-form-field>
             <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
                 [value]="product.bpmReferencia" name="bpmReferencia" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Pressão Arterial (PA)"
+                [value]="product.pressaoArterial" name="pressaoArterial" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Pressão Arterial Referencia (PA)"
+                [value]="product.pressaoArterialReferencia" name="pressaoArterialReferencia" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Saturação (85)"
+            [value]="product.saturacao" name="saturacao" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Saturação Referencia (85)"
+            [value]="product.saturacaoReferencia" name="saturacaoReferencia" disabled>
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="deleteProduct()" color="warn">

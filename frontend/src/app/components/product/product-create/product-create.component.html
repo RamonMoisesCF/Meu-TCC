@@ -1,17 +1,51 @@
 <mat-card>
     <mat-card-title>Novo Paciente</mat-card-title>
     <form>
+
+       <h2>Dados Pessoais</h2>
+
+        
         <mat-form-field>
             <input matInput placeholder="Nome"
                 [(ngModel)]="product.name" name="name">
         </mat-form-field>
+
+        <div>
         <mat-form-field>
+            <input matInput placeholder="Idade"
+                [(ngModel)]="product.idade" name="number">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone (xx) x xxxx-xxxx"
+                [(ngModel)]="product.telefone" type="text">
+        </mat-form-field>
+        </div>
+        
+        <h2>Dados Fisiológicos</h2>
+
+       <!--  <mat-form-field>
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [(ngModel)]="product.bpm" name="number" type="number">
-        </mat-form-field>
+        </mat-form-field> -->
         <mat-form-field>
             <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
                 [(ngModel)]="product.bpmReferencia" name="number" type="number">
+        </mat-form-field>
+       <!--  <mat-form-field>
+            <input matInput placeholder="Pressao Arterial (12.8)"
+                [(ngModel)]="product.pressaoArterial" name="number" type="number">
+        </mat-form-field> -->
+        <mat-form-field>
+            <input matInput placeholder="Pressao Arterial Referencia (12.8)"
+                [(ngModel)]="product.pressaoArterialReferencia" name="number" type="number">
+        </mat-form-field>
+        <!-- <mat-form-field>
+            <input matInput placeholder="Saturação (85)"
+                [(ngModel)]="product.saturacao" name="number" type="number">
+        </mat-form-field> -->
+        <mat-form-field>
+            <input matInput placeholder="Saturação Referencia (85)"
+                [(ngModel)]="product.saturacaoReferencia" name="number" type="number">
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="createProduct()" color="primary">

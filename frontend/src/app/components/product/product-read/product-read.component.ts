@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class ProductReadComponent implements OnInit {
 
   products: Product[]
-  displayedColumns = ['id', 'name', 'bpm', 'bpmReferencia', 'action']
+  displayedColumns = ['id', 'name', 'bpm', /* 'bpmReferencia', */ 'pressaoArterial', 
+  /* 'pressaoArterialReferencia', */ 'saturacao', /* 'saturacaoReferencia', */ 'action']
   
   constructor(private productService: ProductService) { }
 
@@ -30,6 +31,22 @@ export class ProductReadComponent implements OnInit {
     console.log(bpm, bpmReferencia)
     if (bpm > bpmReferencia) {
       return true 
+    }
+    return false
+  }
+
+  public mostraPressao( pressaoArterial, pressaoArterialReferencia ) {
+    console.log(pressaoArterial, pressaoArterialReferencia)
+    if (pressaoArterial > pressaoArterialReferencia) {
+      return true 
+    }
+    return false
+  }
+
+  public mostraSaturacao( saturacao, saturacaoReferencia ) {
+    console.log(saturacao, saturacaoReferencia)
+    if (saturacao < saturacaoReferencia) {
+      return true
     }
     return false
   }

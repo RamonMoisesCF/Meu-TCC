@@ -22,7 +22,7 @@
             monitor_heart
           </span>
 
-          BPM Atual
+          Batimentos Cardíacos
 
         </th>
         <td mat-cell *matCellDef="let row">
@@ -67,6 +67,122 @@
         </span>
 
         {{row.bpmReferencia}}
+
+      </td>
+    </ng-container>
+
+    <!-- Pressão Arterial -->
+    <ng-container matColumnDef="pressaoArterial">
+        
+      <th mat-header-cell *matHeaderCellDef> 
+
+        <span class="material-icons">
+          <img src="../../../../assets/img/pressao-arterial.png" width="24" height="24">
+        </span>
+
+        Pressao Arterial
+
+      </th>
+      <td mat-cell *matCellDef="let row">
+
+        <!-- Função Pressao -->
+        
+        <div *ngIf="mostraPressao( row.pressaoArterial, row.pressaoArterialReferencia ); then pressaoAlerta; else pressaoNormal"></div>
+
+        <ng-template #pressaoAlerta>
+          <img class="fa-blink" src="../../../../assets/img/pressao-arterial.png" style="background-color: red;" width="24" height="24">  
+        </ng-template>
+        
+
+        <ng-template #pressaoNormal>
+          <span class="material-icons">favorite</span>
+        </ng-template>
+        
+
+        {{row.pressaoArterial}}
+        
+        
+      </td>
+      
+    </ng-container>
+
+    <!-- Pressão Arterial Referencia -->
+    <ng-container matColumnDef="pressaoArterialReferencia">
+      <th mat-header-cell *matHeaderCellDef>
+
+        <span class="material-icons">
+          <img src="../../../../assets/img/pressao-arterial.png" width="24" height="24">
+        </span>
+
+        Pressao Arterial Referencia
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        <span class="material-icons">
+          favorite
+        </span>
+
+        {{row.pressaoArterialReferencia}}
+
+      </td>
+    </ng-container>
+
+    <!-- Saturação -->
+    <ng-container matColumnDef="saturacao">
+        
+      <th mat-header-cell *matHeaderCellDef> 
+
+        <span class="material-icons">
+          <img src="../../../../assets/img/saturacao-painel.png" width="24" height="24">
+        </span>
+
+        Saturação
+
+      </th>
+      <td mat-cell *matCellDef="let row">
+
+        <!-- Função saturação -->
+        
+        <div *ngIf="mostraSaturacao( row.saturacao, row.saturacaoReferencia ); then saturacaoAlerta; else saturacaoNormal"></div>
+
+        <ng-template #saturacaoAlerta>
+          <img class="fa-blink" src="../../../../assets/img/saturacao.png" style="background-color: red;" width="24" height="24">  
+        </ng-template>
+        
+
+        <ng-template #saturacaoNormal>
+          <img src="../../../../assets/img/saturacao.png" width="24" height="24">
+        </ng-template>
+        
+
+        {{row.saturacao}}
+        
+        
+      </td>
+      
+    </ng-container>
+
+    <!-- Saturação Referencia -->
+    <ng-container matColumnDef="saturacaoReferencia">
+      <th mat-header-cell *matHeaderCellDef>
+
+        <span class="material-icons">
+          <img src="../../../../assets/img/saturacao-painel.png" width="24" height="24">
+        </span>
+
+        Saturação Referencia
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        <span class="material-icons">
+          <img src="../../../../assets/img/saturacao.png" width="24" height="24">
+        </span>
+
+        {{row.saturacaoReferencia}}
 
       </td>
     </ng-container>

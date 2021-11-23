@@ -4,42 +4,45 @@
 
         <h2>Dados Pessoais</h2>
 
-        <mat-form-field>
+        <mat-form-field appearance="fill">
             <input matInput placeholder="Nome"
                 [(ngModel)]="product.name" name="name">
         </mat-form-field>
-        <mat-form-field>
+
+        <div>
+        <mat-form-field appearance="fill">
             <input matInput placeholder="Idade"
                 [(ngModel)]="product.idade" name="idade">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field appearance="fill">
             <input matInput placeholder="Telefone (xx) x xxxx-xxxx"
-                [(ngModel)]="product.telefone" name="telefone">
+                [(ngModel)]="product.telefone" type="text" name="Telefone">
         </mat-form-field>
+        </div>
 
         <h2>Dados Fisiológicos</h2>
 
-        <!-- <mat-form-field>
+        <!-- <mat-form-field appearance="fill">
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [(ngModel)]="product.bpm" name="bpm">
         </mat-form-field> -->
-        <mat-form-field>
+        <mat-form-field appearance="fill">
             <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
                 [(ngModel)]="product.bpmReferencia" name="bpmReferencia">
         </mat-form-field>
-        <!-- <mat-form-field>
+        <!-- <mat-form-field appearance="fill">
             <input matInput placeholder="Pressão Arterial (PA)"
                 [(ngModel)]="product.pressaoArterial" name="pressaoArterial">
         </mat-form-field> -->
-        <mat-form-field>
+        <mat-form-field appearance="fill">
             <input matInput placeholder="Pressão Arterial Referencia (PA)"
                 [(ngModel)]="product.pressaoArterialReferencia" name="pressaoArterialReferencia">
         </mat-form-field>
-        <!-- <mat-form-field>
+        <!-- <mat-form-field appearance="fill">
             <input matInput placeholder="Saturação (85)"
                 [(ngModel)]="product.saturacao" name="saturacao">
         </mat-form-field> -->
-        <mat-form-field>
+        <mat-form-field appearance="fill">
             <input matInput placeholder="Saturacao Referencia (85)"
                 [(ngModel)]="product.saturacaoReferencia" name="saturacaoReferencia">
         </mat-form-field>

@@ -6,26 +6,7 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 const EXAMPLE_DATA: Product[] = [
-  {id: 1, name: 'Hydrogen', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 2, name: 'Helium', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 3, name: 'Lithium', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 4, name: 'Beryllium', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 5, name: 'Boron', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 6, name: 'Carbon', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 7, name: 'Nitrogen', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 8, name: 'Oxygen', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 9, name: 'Fluorine', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 10, name: 'Neon', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 11, name: 'Sodium', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 12, name: 'Magnesium', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 13, name: 'Aluminum', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 14, name: 'Silicon', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 15, name: 'Phosphorus', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 16, name: 'Sulfur', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 17, name: 'Chlorine', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 18, name: 'Argon', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 19, name: 'Potassium', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
-  {id: 20, name: 'Calcium', idade: 99, telefone: 99999999999, bpm: 9.99, bpmReferencia: 9.99, pressaoArterial: 9.99, pressaoArterialReferencia: 9.99, saturacao: 9.99, saturacaoReferencia: 9.99},
+  {id: 1, name: 'Hydrogen', idade: 99, telefone: 99999999999, bpmInferior:999, bpm: 999, bpmReferencia: 999, pressaoArterialInferior:999, pressaoArterial: 999, pressaoArterialReferencia: 999, saturacao: 999, saturacaoReferencia: 999},
 ];
 
 /**

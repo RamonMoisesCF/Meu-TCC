@@ -3,11 +3,13 @@ export interface Product {
     name: string
     idade: number
     telefone: number
-    bpm: number
+    bpmInferior: number
     bpmReferencia: number
-    pressaoArterial: number
+    pressaoArterialInferior: number
     pressaoArterialReferencia: number
-    saturacao: number
     saturacaoReferencia: number
+    bpm: number
+    pressaoArterial: number
+    saturacao: number
 
 }

@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductReadComponent implements OnInit {
 
   products: Product[]
-  displayedColumns = ['id', 'name', 'bpm', /* 'bpmReferencia', */ 'pressaoArterial', 
+  displayedColumns = ['id', 'name', 'bpm',/* 'bpmReferencia', */ 'pressaoArterial', 
   /* 'pressaoArterialReferencia', */ 'saturacao', /* 'saturacaoReferencia', */ 'action']
   
   constructor(private productService: ProductService) { }
@@ -19,25 +19,24 @@ export class ProductReadComponent implements OnInit {
     this.productService.read().subscribe(products => {
       this.products = products
     })
+
+  /* Função de Reload */
+  setTimeout(function(reload){
+  window.location.reload();
+  }, 5000);
+  
   }
 
-  public mostraCoracao( bpm, bpmReferencia ) {
+  public mostraCoracao( bpm, bpmReferencia, bpmInferior ) {
 
-    /* Função de Reload */
-    setTimeout(function(){
-      window.location.reload();
-   }, 5000);
-
-    console.log(bpm, bpmReferencia)
-    if (bpm > bpmReferencia) {
+    if (bpm > bpmReferencia || bpm < bpmInferior && bpm > 0) {
       return true 
     }
     return false
   }
 
-  public mostraPressao( pressaoArterial, pressaoArterialReferencia ) {
-    console.log(pressaoArterial, pressaoArterialReferencia)
-    if (pressaoArterial > pressaoArterialReferencia) {
+  public mostraPressao( pressaoArterial, pressaoArterialReferencia, pressaoArterialInferior ) {
+    if (pressaoArterial > pressaoArterialReferencia || pressaoArterial < pressaoArterialInferior && pressaoArterial > 0) {
       return true 
     }
     return false
@@ -45,7 +44,7 @@ export class ProductReadComponent implements OnInit {
 
   public mostraSaturacao( saturacao, saturacaoReferencia ) {
     console.log(saturacao, saturacaoReferencia)
-    if (saturacao < saturacaoReferencia) {
+    if (saturacao < saturacaoReferencia && saturacao > 0 || saturacao > 100) {
       return true
     }
     return false

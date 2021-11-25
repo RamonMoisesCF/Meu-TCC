@@ -7,6 +7,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #e35e6b;
 }
 
+.green {
+    color: #00b418;
+}
+
 .v-middle {
     vertical-align: middle;
 }

@@ -191,6 +191,11 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let row">
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=55{{ row.telefone }}">
+              <i class="material-icons">
+                <span class="green">whatsapp</span>
+              </i>
+            </a>
             <a routerLink="/products/update/{{ row.id }}" class="edit">
               
                 <i class="material-icons">

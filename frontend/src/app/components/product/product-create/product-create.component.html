@@ -5,20 +5,23 @@
         <h2>Dados Pessoais</h2>
         
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Nome"
+            <mat-label>Nome</mat-label>
+            <input matInput
                 [(ngModel)]="product.name" name="name">
         </mat-form-field>
         
         <table cellspacing="0"><tr>
         <td><mat-form-field appearance="fill">
-            <input matInput placeholder="Idade"
+            <mat-label>Idade</mat-label>
+            <input matInput
                 [(ngModel)]="product.idade" name="idade">
         </mat-form-field></td>
 
         
 
         <td><mat-form-field appearance="fill">
-            <input matInput placeholder="Telefone (xx) x xxxx-xxxx"
+            <mat-label>Telefone (xx) x xxxx-xxxx</mat-label>
+            <input matInput
                 [(ngModel)]="product.telefone" type="tel" name="telefone" >
         </mat-form-field></td>
         </tr></table>
@@ -31,32 +34,52 @@
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [(ngModel)]="product.bpm" name="number" type="number">
         </mat-form-field> -->
+
+        <table cellspacing="0"><tr>
+
+        <td>
         <mat-form-field appearance="fill">
-            <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
-                [(ngModel)]="product.bpmReferencia" name="number" type="number">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <input matInput placeholder="BPM bpmInferior (Batimentos por minuto)"
+            <mat-label>BPM Mínimo</mat-label>
+            <input matInput
                 [(ngModel)]="product.bpmInferior" name="number" type="number">
-        </mat-form-field>
+        </mat-form-field></td>
+        <td>
+        <mat-form-field appearance="fill">
+            <mat-label>BPM Máximo</mat-label>
+            <input matInput
+                [(ngModel)]="product.bpmReferencia" name="number" type="number">
+        </mat-form-field></td>
+
+        </tr></table>
+
        <!--  <mat-form-field appearance="fill">
             <input matInput placeholder="Pressao Arterial (12.8)"
                 [(ngModel)]="product.pressaoArterial" name="number" type="number">
         </mat-form-field> -->
+
+        <table cellspacing="0"><tr>
+        <td>
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Pressao Arterial Referencia (12.8)"
-                [(ngModel)]="product.pressaoArterialReferencia" name="number" type="number">
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-            <input matInput placeholder="Pressao Arterial Inferior (12.8)"
+            <mat-label>PA Mínima Ex.(12.8)</mat-label>
+            <input matInput
                 [(ngModel)]="product.pressaoArterialInferior" name="number" type="number">
-        </mat-form-field>
+        </mat-form-field></td>
+        <td>
+        <mat-form-field appearance="fill">
+            <mat-label>PA Máxima Ex. (13.8)</mat-label>
+            <input matInput
+                [(ngModel)]="product.pressaoArterialReferencia" name="number" type="number">
+        </mat-form-field></td>
+        
+        </tr></table>
+
         <!-- <mat-form-field appearance="fill">
             <input matInput placeholder="Saturação (85)"
                 [(ngModel)]="product.saturacao" name="number" type="number">
         </mat-form-field> -->
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Saturação Referencia (85)"
+            <mat-label>Saturação Referência Ex.(85)</mat-label>
+            <input matInput
                 [(ngModel)]="product.saturacaoReferencia" name="number" type="number">
         </mat-form-field>
     </form>

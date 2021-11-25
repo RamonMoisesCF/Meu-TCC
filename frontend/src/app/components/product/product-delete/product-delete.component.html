@@ -9,16 +9,18 @@
                 [value]="product.name" name="name" disabled>
         </mat-form-field>
 
-        <div>
+        <table cellspacing="0"><tr>
+        <td>
         <mat-form-field appearance="fill">
             <input matInput placeholder="Idade"
                 [value]="product.idade" name="idade" disabled>
-        </mat-form-field>
+        </mat-form-field></td>
+        <td>
         <mat-form-field appearance="fill">
             <input matInput placeholder="Telefone (xx) x xxxx-xxxx"
                 [value]="product.telefone" name="telefone" disabled>
-        </mat-form-field>
-        </div>
+        </mat-form-field></td>
+        </tr></table>
 
         <h2>Dados Fisiológicos</h2>
 
@@ -26,18 +28,35 @@
             <input matInput placeholder="BPM (Batimentos por minuto)"
                 [value]="product.bpm" name="bpm" disabled>
         </mat-form-field> -->
+        <table cellspacing="0"><tr>
+        <td>
         <mat-form-field appearance="fill">
-            <input matInput placeholder="BPM Referencia (Batimentos por minuto)"
+            <input matInput placeholder="BPM Mínimo"
+                [value]="product.bpmInferior" name="bpmInferior" disabled>
+        </mat-form-field></td>
+        <td>
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="BPM Máximo"
                 [value]="product.bpmReferencia" name="bpmReferencia" disabled>
-        </mat-form-field>
+        </mat-form-field></td>
+        </tr></table>
+
         <!-- <mat-form-field appearance="fill">
             <input matInput placeholder="Pressão Arterial (PA)"
                 [value]="product.pressaoArterial" name="pressaoArterial" disabled>
         </mat-form-field> -->
+        <table cellspacing="0"><tr>
+        <td>
         <mat-form-field appearance="fill">
-            <input matInput placeholder="Pressão Arterial Referencia (PA)"
+            <input matInput placeholder="PA Mínima (12.8)"
+                [value]="product.pressaoArterialInferior" name="pressaoArterialReferencia" disabled>
+        </mat-form-field></td>
+        <td>
+        <mat-form-field appearance="fill">
+            <input matInput placeholder="PA Máxima (12.8)"
                 [value]="product.pressaoArterialReferencia" name="pressaoArterialReferencia" disabled>
-        </mat-form-field>
+        </mat-form-field></td>
+        </tr></table>
         <!-- <mat-form-field appearance="fill">
             <input matInput placeholder="Saturação (85)"
             [value]="product.saturacao" name="saturacao" disabled>
